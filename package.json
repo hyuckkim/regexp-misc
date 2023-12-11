@@ -1,0 +1,19 @@
+{
+  "name": "regexp-misc",
+  "version": "1.0.0",
+  "description": "my misc tools with regexp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyuckkim/regexp-misc.git"
+  },
+  "author": "kim kwanghyuck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hyuckkim/regexp-misc/issues"
+  },
+  "homepage": "https://github.com/hyuckkim/regexp-misc#readme"
+}
