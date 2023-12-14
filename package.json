@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hyuckkim/regexp-misc/issues"
   },
+  "keywords": [
+    "regexp"
+  ],
   "homepage": "https://github.com/hyuckkim/regexp-misc#readme"
 }

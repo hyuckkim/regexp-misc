@@ -2,7 +2,10 @@
 my small tool for Regular Expression.
 
 
-## usage
+## functions
+
+### `export function getAllRegexp(text: string, regexp: RegExp): RegExpExecArray[]`
+Find all regular expressions in the text, so that's each types is RegExpEcecArray.
 
 ### `separate(text: string, regexp: RegExp): (string | RegExpExecArray)[]`
 Finds all regular expressions in the text, then mixes them with results that do not contain regular expressions.
@@ -23,17 +26,6 @@ console.log(s);
   (RegExpExecArray),
   '!'
 ]
-```
-
-### `findAndReplace(text: string, regexp: RegExp, replace: string): string`
-Perform find and replace like vscode does.
-
-```typescript
-const f = findAndReplace('hello, <h>regexp</h> <b>world</b>!', /<.+?>(.+?)<\/.+?>/g, "'$1'");
-console.log(f);
-```
-```
-hello, 'regexp' 'world'!
 ```
 
 ### `match<T>(text: string, array: [RegExp, (found: RegExpExecArray) => T][]): T | null`

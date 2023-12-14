@@ -33,32 +33,6 @@ function takeOnlyText(split: string[], array: RegExpExecArray[]): string[] {
   return result;
 }
 
-export function findAndReplace(text: string, regexp: RegExp, replace: string): string {
-  const d = separate(text, regexp);
-
-  return d.reduce((prev: string, curr) => {
-    if (typeof curr === "string") {
-      return prev + curr;
-    } 
-    else {
-      return prev + replaceByRegexp(replace, curr);
-    }
-  }, "");
-}
-function replaceByRegexp(text: string, regexp: RegExpExecArray): string {
-  const d = separate(text, /\$([0-9]+)/g);
-
-  return d.reduce((prev: string, curr) => {
-    if (typeof curr === "string") {
-      return prev + curr;
-    }
-    else {
-      const no = Number.parseInt(curr[1]);
-      return prev + regexp[no];
-    }
-  }, "");
-}
-
 export function match<T>(text: string, array: [RegExp, (found: RegExpExecArray) => T][]): T | null {
   for (const [regexp, func] of array) {
     const m: RegExpExecArray | null = regexp.exec(text);
